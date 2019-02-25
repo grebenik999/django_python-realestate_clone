@@ -1,3 +1,4 @@
+from django.contrib.messages import constants as messages
 """
 Django settings for realestate project.
 
@@ -33,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'listings.apps.ListingsConfig',
+    'accounts.apps.AccountsConfig',
     'realtors.apps.RealtorsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -134,3 +136,8 @@ STATICFILES_DIRS = [
 # Media folder settings:
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
